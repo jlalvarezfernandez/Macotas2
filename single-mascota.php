@@ -41,5 +41,9 @@
 <div>RUT:<?php the_field('rut'); ?></div>
 <div>TELÉFONO<?php the_field('telefono'); ?></div>
 <div>EMAIL:<?php the_field('email'); ?></div>
+<div class="qr">Código qr:<?php QRcode::png('PHP QR Code :)'); ?></div>
+
 <?php
-QRcode::png('PHP QR Code :)'); 
+
+
+
