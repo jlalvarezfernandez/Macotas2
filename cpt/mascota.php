@@ -6,7 +6,7 @@
 
 /*  
  * 
- * MASCOTA: campos que va a tener cada mascota que creeemos  
+ * MASCOTA:  este archivo genera el CPT 
  * 
  */
 
