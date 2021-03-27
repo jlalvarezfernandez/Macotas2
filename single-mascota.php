@@ -1,6 +1,6 @@
 <div>ID: <?php the_field('id');
             ?></div>
-           
+
 <div>NOMBRE:<?php the_field('nombre'); ?></div>
 <div>TIPO:<?php the_field('tipo'); ?></div>
 <div>SEXO:<?php the_field('sexo'); ?></div>
