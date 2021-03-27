@@ -15,8 +15,8 @@ add_action( 'init', 'mascota_cpt_create' );
 
 function mascota_cpt_create() {
 	$labels = array(
-		'name' => __( 'mascota'), 
-        'singular_name' => __( 'mascota' ),
+		'name' => __( 'Mascota'), 
+        'singular_name' => __( 'Mascota' ),
         'add_new' => _x( 'Añadir nuevo', 'mascota' ),
         'add_new_item' => __( 'Añadir nuevo mascota'),
         'edit_item' => __( 'Editar mascota' ),
