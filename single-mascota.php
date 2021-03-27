@@ -42,4 +42,4 @@
 <div>TELÉFONO<?php the_field('telefono'); ?></div>
 <div>EMAIL:<?php the_field('email'); ?></div>
 <?php
-/* QRcode::png('PHP QR Code :)'); */
+QRcode::png('PHP QR Code :)'); 
