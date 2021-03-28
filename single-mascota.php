@@ -3,7 +3,7 @@
 
     ?>
     <div class="principal">
-        <div class="datosMascota">
+        <div class="datos-mascota">
             <div class="alerta">
                 <p>Se ha enviado un email al propietario de la mascota</p>
             </div>
@@ -66,7 +66,7 @@
                 </p>
             </div>
         </div>
-        <div class="imgMascota">
+        <div class="img-mascota">
             <div>
                 FOTO:
                 <?php $foto = get_field('foto'); ?>
@@ -78,7 +78,7 @@
         </div>
 
 
-        <div class="datosDueño">
+        <div class="datos-dueño">
             <div>
                 <h2>NOMBRE DUEÑO:
                     <?php the_field('nombre_dueno'); ?>
