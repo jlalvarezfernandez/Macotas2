@@ -6,14 +6,14 @@
 
 /*  
  * 
- * MASCOTA: campos que va a tener cada mascota que creeemos  
+ * PROPIETARIO: campos que va a tener cada mascota que creeemos  
  * 
  */
 if (function_exists('acf_add_local_field_group')) :
 
 	acf_add_local_field_group(array(
 		'key' => 'group_604641e71135d',
-		'title' => 'Mascota',
+		'title' => 'Propietario',
 		'fields' => array(
 			
 			array(
