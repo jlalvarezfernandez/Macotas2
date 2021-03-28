@@ -12,28 +12,28 @@
                     <?php the_field('alerta'); ?>
                 </p>
             </div>
-            <div>
+            <div class="nombre-mascota">
                 <h1>NOMBRE:
                     <?php the_field('nombre'); ?>
                 </h1>
             </div>
-            <div>
+            <div class="id-mascota">
                 <p>ID:
                     <?php the_field('id'); ?>
                 </p>
             </div>
-            <div>
+            <div class="tipo-mascota">
                 <p> TIPO:
                     <?php the_field('tipo'); ?>
                 </p>
             </div>
-            <div>
+            <div class="sexo-mascota">
                 <p>SEXO:
                     <?php the_field('sexo'); ?>
                 </p>
             </div>
 
-            <div>
+            <div class="user-mascota">
                 <p>USER:
                     <?php $user = get_field('user'); ?>
                     <?php if ($user) : ?>
@@ -44,19 +44,19 @@
                 </p>
 
             </div>
-            <div>
+            <div class="chip-mascota">
                 <p>CHIP:
                     <?php the_field('chip'); ?>
                 </p>
             </div>
 
-            <div>
+            <div class="raza-mascota">
                 <p>RAZA:
                     <?php the_field('raza'); ?>
                 </p>
             </div>
 
-            <div>
+            <div class="qr-mascota">
                 <p>Qr:
                     <?php $qr = get_field('qr'); ?>
 
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="img-mascota">
-            <div>
+            <div class="foto-mascota">
                 FOTO:
                 <?php $foto = get_field('foto'); ?>
                 <?php if ($foto) : ?>
@@ -79,34 +79,34 @@
 
 
         <div class="datos-dueño">
-            <div>
+            <div class="nombre-propietario">
                 <h2>NOMBRE DUEÑO:
                     <?php the_field('nombre_dueno'); ?>
                 </h2>
             </div>
-            <div>
+            <div class="apellidos-propietario">
                 <p>APELLIDOS:
                     <?php the_field('apellidos'); ?>
                 </p>
             </div>
-            <div>
+            <div class="rut-propietario">
                 <p>RUT:
                     <?php the_field('rut'); ?>
                 </p>
             </div>
-            <div>
+            <div class="telefono-propietario">
                 <p>TELÉFONO:
                     <?php the_field('telefono'); ?>
                 </p>
             </div>
-            <div>
+            <div class="email-propietario">
                 <p>EMAIL:
                     <?php the_field('email'); ?>
                 </p>
             </div>
         </div>
         <div class="mapa">
-            <div>
+            <div class="localizacion-mapa">
                 MAPA:
                 <?php $mapa = get_field('mapa'); ?>
                 <?php if ($mapa) : ?>
