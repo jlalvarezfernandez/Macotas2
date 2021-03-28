@@ -1,6 +1,5 @@
 <?php
 
-include("lib/phpqrcode/phpqrcode.php");
 include("cpt/mascota.php");
 include("cpt/propietario.php");
 include("metaboxes/mascota.php");
