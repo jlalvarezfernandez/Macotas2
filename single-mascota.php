@@ -132,8 +132,7 @@
         </div>
 
 
-        <!-- <div class="qr">Código qr:<?php QRcode::png('PHP QR Code :)'); ?></div> -->
-
+ 
 
     </div>
 
