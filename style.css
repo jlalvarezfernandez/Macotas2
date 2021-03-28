@@ -11,4 +11,74 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  united-pets_child
 */
-.hidden{display:none;}
+
+.hidden {
+    display: none;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    margin: 10px;
+    padding: 10px;
+}
+.nombre-mascota h1{
+    font-size: 1.5rem;
+}
+.nombre-mascota p{
+    margin: 0;
+}
+
+.img-mascota {
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+   /*  align-content: center; */
+}
+
+.mapa {
+    display: grid;
+    margin: 10px;
+    padding: 10px;
+    /* align-content: center; */
+}
+
+.principal div {
+    /*  border: 1px solid black; */
+}
+
+.alerta {
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 4vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.chip-mascota {
+    font-size: 0.7rem;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.foto2 {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    z-index: 1;
+    right: 350px;
+    bottom: 150px;
+}
+
+.foto1 {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+}
+
