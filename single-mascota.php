@@ -1,31 +1,57 @@
     <?php
-    get_header();
+    //definicion de variables
+
+    // variables para mandar el correo de alerta si fuera necesario
+
+    $alerta = 'si';
+    $subject = "mensaje de prueba";
+    $headers = 'From: pagina mascotas <+cotas.@gmail.com>/r/n';
+    $to = "joseluisalvarezfernandez@gmail.com/r/n";
+    $message = 'Se ha enviado un email al propietario de la mascota/r/n';
+
+    // variables para mostrar el sexo de la mascota
+
+    $macho =  get_stylesheet_directory_uri() . "/assets/img/masculino.png";
+    $hembra =  get_stylesheet_directory_uri() . "/assets/img/femenino.png";
+    $sexo_mascota_formulario = get_field('sexo');
+
+    // variables para mostrar el tipo de mascota
+
+    $perro = get_stylesheet_directory_uri() . "/assets/img/perro.png";
+    $gato = get_stylesheet_directory_uri() . "/assets/img/gato.png";
+    $tipo_animal_formulario = get_field('tipo');
+
+    // variables para mostrar el código qr y la imagen que le acompaña
+
+    $foto = get_field('foto');
+    $foto1 =  get_stylesheet_directory_uri() . "/assets/img/gato.png";
+    $foto2 = "https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/proyectoMascotas/mascota/fgfbgfd/&amp;size=100x100";
+
+    // variabe para mostrar el mapa
+
+    $mapa = get_field('mapa')
+
+
 
     ?>
+    <?php
+    get_header();
+    ?>
+
     <div class="alerta">
         <p>Se ha enviado un email al propietario de la mascota</p>
     </div>
     <p>ALERTA:
-    <?php
-        $alerta = 'alerta';
-        $headers = 'email';
-        $to;
-        $message = 'Se ha enviado un email al propietario de la mascota';
-        
-      /*     if ($alerta == "si" ) {
-            mail ($to , $subject , $message, $headers) true;
-
-            } else {
-                echo "nada";
-            }   */
-
-
-
-        the_field('alerta'); ?> 
-            </p> */
+        <?php
+        if ($alerta == "si") {
+            mail($to, $subject, $message, $headers);
+        } else {
+            echo "nada";
+        }
+        the_field('alerta'); ?>
+    </p>
     <div class="principal">
         <div class="datos-mascota">
-
             <div class="nombre-mascota">
                 <div class="info">
                     <h1>NOMBRE:
@@ -38,11 +64,7 @@
                     </div>
                     <div class="sexo-mascota">
                         <p>
-                            <?php 
-
-                            $macho =  get_stylesheet_directory_uri() . "/assets/img/masculino.png";
-                            $hembra =  get_stylesheet_directory_uri() . "/assets/img/femenino.png";
-                            $sexo_mascota_formulario = get_field('sexo');
+                            <?php
                             if ($sexo_mascota_formulario ==  'Macho') {
                                 echo "<img src='$macho' alt='macho' title='macho'/>";
                             } else {
@@ -52,24 +74,17 @@
                         </p>
                     </div>
                     <div class="tipo-mascota">
-                        <p> 
-                            <?php 
-                            $perro = get_stylesheet_directory_uri() . "/assets/img/perro.png";
-                            $gato = get_stylesheet_directory_uri() . "/assets/img/gato.png";
-                            $tipo_animal_formulario = get_field('tipo');
+                        <p>
+                            <?php
                             if ($tipo_animal_formulario == 'perro') {
                                 echo "<img src='$perro'/ alt='perro' title='perro'/>";
                             } else {
                                 echo "<img src='$gato' alt='gato' title='gato'/>";
                             }
-
-
                             ?>
-
                         </p>
                     </div>
                 </div>
-
                 <div class="chip-mascota">
                     <p>CHIP:
                         <?php the_field('chip'); ?>
@@ -85,7 +100,6 @@
                         <?php the_field('id'); ?>
                     </p>
                 </div>
-
                 <div class="user-mascota">
                     <p>USER:
                         <?php $user = get_field('user'); ?>
@@ -97,10 +111,6 @@
                     </p>
 
                 </div>
-
-
-
-
                 <!--  <div class="qr-mascota">
                     <p>Qr:
                         <?php $qr = get_field('qr'); ?>
@@ -113,18 +123,14 @@
             </div>
 
         </div>
-
         <div class="img-mascota">
             <div class="foto-mascota">
                 FOTO:
-                <?php $foto = get_field('foto'); ?>
-                <?php 
-                    $foto1 =  get_stylesheet_directory_uri() . "/assets/img/gato.png";
-                    $foto2 = "https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/proyectoMascotas/mascota/fgfbgfd/&amp;size=100x100"; ?>
-                    <img class="foto1" src="<?php echo ($foto1); ?>" />
-                    <img class="foto2" src="<?php echo ($foto2); ?>" />
-                
-
+                <?php ?>
+                <?php
+                ?>
+                <img class="foto1" src="<?php echo ($foto1); ?>" />
+                <img class="foto2" src="<?php echo ($foto2); ?>" />
             </div>
 
         </div>
@@ -159,7 +165,7 @@
         <div class="mapa">
             <div class="localizacion-mapa">
                 MAPA:
-                <?php $mapa = get_field('mapa'); ?>
+                <?php ?>
                 <?php if ($mapa) : ?>
                     <?php echo $mapa['address']; ?>
                     <?php echo $mapa['lat']; ?>
@@ -174,16 +180,8 @@
                 <?php endif; ?>
             </div>
         </div>
-
-
-
-
-
     </div>
 
-
     <?php
-
     get_footer();
-
     ?>
