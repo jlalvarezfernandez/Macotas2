@@ -3,7 +3,8 @@
 
     // variables para mandar el correo de alerta si fuera necesario
 
-    $alerta = 'si';
+    $dueno = get_field('nombre_dueno');
+    $alerta_formulario = 'si';
     $subject = "mensaje de prueba";
     $headers = 'From: pagina mascotas <+cotas.@gmail.com>/r/n';
     $to = "joseluisalvarezfernandez@gmail.com/r/n";
@@ -41,14 +42,22 @@
     <div class="alerta">
         <p>Se ha enviado un email al propietario de la mascota</p>
     </div>
-    <p>ALERTA:
+    <p>
+    
         <?php
-        if ($alerta == "si") {
-            mail($to, $subject, $message, $headers);
-        } else {
-            echo "nada";
+        
+        if(get_field('alerta') == true){
+           
+            if (mail($to, $subject, $message, $headers) == true) {
+                echo "email enviado";
+             }  else {
+                 echo "El email no se ha podido mandar, consulte con su administrador";
+             }
+             echo "Se ha enviado un email al propietario de la mascota";
         }
-        the_field('alerta'); ?>
+        
+
+       /*  the_field('alerta'); */ ?>
     </p>
     <div class="principal">
         <div class="datos-mascota">
