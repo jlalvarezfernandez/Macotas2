@@ -26,9 +26,13 @@
 
     // variables para mostrar el código qr y la imagen que le acompaña
 
-    $foto1 = get_field('foto');    
+    $foto1 = get_field('foto');
+    
+    echo '<pre>';
+        print_r($foto1);
+    echo '</pre>';
 
-    $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() ."&amp;size=150x150";
+    $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() ."&amp;size=200x200";
 
     // variabe para mostrar el mapa
 
@@ -60,11 +64,10 @@
 
             <div class="info">
                 <h1>
-                    <?php the_field('nombre');
-                    echo " - " ?>
-
-                    <?php the_field('raza'); ?>
-                    
+                    <?php the_field('nombre_mascota');
+                    echo " - ";
+                    the_field('raza'); 
+                ?>                    
                 </h1>
                 <div class="chip-mascota">
                     <label>CHIP:</label>
