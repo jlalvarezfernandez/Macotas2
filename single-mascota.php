@@ -8,10 +8,10 @@
 
     $dueno = get_field('nombre_dueno');
     
-    $subject = "mensaje de prueba";
-    $headers = 'From: pagina mascotas <+cotas.@gmail.com>/r/n';
-    $to = "joseluisalvarezfernandez@gmail.com/r/n";
-    $message = 'Se ha enviado un email al propietario de la mascota/r/n';
+    $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
+    $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
+    $to = the_field('email');
+    $message = 'Este es un email de alerta, su mascota podría haber sido encontrada. /r/n';
 
     // variables para mostrar el sexo de la mascota
 
@@ -36,8 +36,7 @@
     
     <?php if (get_field('alerta_email') == true): ?>
         <?php   
-            //$mail = mail($to, $subject, $message, $headers);
-            $mail = false;
+            $mail = mail($to, $subject, $message, $headers);            
             if ($mail){
                 $message = __("Email enviado al propietario de la mascota");
                 $class = 'success';
