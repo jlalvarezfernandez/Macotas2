@@ -26,13 +26,13 @@
 
     // variables para mostrar el código qr y la imagen que le acompaña
 
-    $foto1 = get_field('foto');
+    $foto1 = get_field('foto_mascota');
     
     echo '<pre>';
         print_r($foto1);
     echo '</pre>';
 
-    $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() ."&amp;size=200x200";
+    $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() ."&amp;size=250x250";
 
     // variabe para mostrar el mapa
 
