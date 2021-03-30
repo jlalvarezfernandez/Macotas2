@@ -43,7 +43,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '25',
 					'class' => '',
 					'id' => '',
 				),
@@ -62,7 +62,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '25',
 					'class' => '',
 					'id' => '',
 				),
@@ -87,7 +87,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '25',
 					'class' => '',
 					'id' => '',
 				),
@@ -107,7 +107,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'label' => 'Chip',
 				'name' => 'chip',
 				'type' => 'text',
-				'instructions' => '',
+				'instructions' => '25',
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
@@ -283,12 +283,12 @@ if (function_exists('acf_add_local_field_group')) :
 				'append' => '',
 			),
 			array(
-				'key' => 'mascota_alerta',
-				'label' => 'Telefono',
-				'name' => 'mascota_alerta',
+				'key' => 'alerta_email',
+				'label' => 'Alerta de email',
+				'name' => 'alerta_email',
 				'type' => 'true_false',
 				'instructions' => '',
-				'required' => 1,
+				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
 					'width' => '',
@@ -300,6 +300,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'prepend' => '',
 				'append' => '',
 				'maxlength' => '',
+				'ui' => 1,
 			),
 			
 		),

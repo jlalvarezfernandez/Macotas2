@@ -37,7 +37,7 @@
     ?>
 
     
-    <?php if (get_field('alerta') == true): ?>
+    <?php if (get_field('alerta_email') == true): ?>
         <?php   
             //$mail = mail($to, $subject, $message, $headers);
             $mail = false;
