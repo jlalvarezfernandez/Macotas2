@@ -110,7 +110,7 @@
                 <h2>Datos Propietario</h2>
             </div>
             <div class="apellidos-propietario">
-                <label>Nombre y apellidos: </label><span><?php  the_field('nombre_dueno'); echo ' '; the_field('apellidos_dueno'); ?></span>
+                <label>Nombre y apellidos: </label><span><?php the_field('nombre_dueno'); echo ' '; the_field('apellidos_dueno'); ?></span>
             </div>            
             <div class="telefono-propietario">
                 <label>Teléfono: </label>
