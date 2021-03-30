@@ -61,11 +61,7 @@
                     echo " - ";
                     the_field('raza'); 
                 ?>                    
-                </h1>
-                <div class="chip-mascota">
-                    <label>CHIP:</label>
-                    <span><?php the_field('chip'); ?> </span>                       
-                </div>
+                </h1>                
                 <div class="sexo-mascota">
                     <?php
                         if ( strtolower($sexo_mascota_formulario) == 'macho' ) {
@@ -85,11 +81,19 @@
                     ?>                    
                 </div>
             </div>
+            <div class="descripcion-mascota">                
+                <p><?php the_content(); ?></p>
+            </div>
             <div class="mas-datos">
                 <div class="otra-info">
-                    <h3>Información complementaria: </h3>
-                    <p><?php the_field('otra_informacion'); ?></p>
-                </div>
+                    <h5>Información complementaria: </h5>
+                    <div class="chip">
+                        <label>Chip: </label><span><?php the_field('chip'); ?></span>                       
+                    </div>
+                    <div class="otra-informacion">
+                        <p><?php the_field('otra_informacion'); ?></p>
+                    </div>                   
+                </div> 
             </div>
 
         </section>
