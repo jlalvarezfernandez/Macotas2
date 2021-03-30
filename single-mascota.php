@@ -48,7 +48,7 @@
             } 
         ?>
             <div class="alerta <?= $class; ?>">
-                <?= $message ?>;
+                <?= $message; ?>
             </div>
     <?php endif; ?>       
     
@@ -90,6 +90,7 @@
                     <div class="chip">
                         <label>Chip: </label><span><?php the_field('chip'); ?></span>                       
                     </div>
+                    <hr>
                     <div class="otra-informacion">
                         <p><?php the_field('otra_informacion'); ?></p>
                     </div>                   
