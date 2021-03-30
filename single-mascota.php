@@ -36,7 +36,8 @@
     
     <?php if (get_field('alerta_email') == true): ?>
         <?php   
-            $mail = mail($to, $subject, $message, $headers);            
+            //$mail = mail($to, $subject, $message, $headers);
+            $mail = false;
             if ($mail){
                 $message = __("Email enviado al propietario de la mascota");
                 $class = 'success';
