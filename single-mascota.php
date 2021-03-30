@@ -84,13 +84,13 @@
             <div class="descripcion-mascota">                
                 <p><?php the_content(); ?></p>
             </div>
+            <hr>
             <div class="mas-datos">
                 <div class="otra-info">
                     <h5>Información complementaria: </h5>
                     <div class="chip">
                         <label>Chip: </label><span><?php the_field('chip'); ?></span>                       
-                    </div>
-                    <hr>
+                    </div>                    
                     <div class="otra-informacion">
                         <p><?php the_field('otra_informacion'); ?></p>
                     </div>                   
