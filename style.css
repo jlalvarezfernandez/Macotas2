@@ -18,33 +18,50 @@ Text Domain:  united-pets_child
 
 .principal {
     display: grid;
-    grid-template-columns: 75% 25%;
-    margin: 10px;
-    padding: 10px;
+    grid-template-columns: 62% 33%;
 }
-.nombre-mascota h1{
-    font-size: 1.5rem;
+
+.info {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    text-align: left;
+    *align-items: center;
+    padding: 0;
 }
-.nombre-mascota p{
+
+.info h1 {
+    font-size: 1.8rem;
     margin: 0;
 }
 
-.img-mascota {
+.raza-mascota {
+    font-size: 1.2rem;
+}
+
+.info p {
+    margin: 0;
+}
+
+.mas-datos {
     display: grid;
-    margin: 10px;
-    padding: 10px;
-   /*  align-content: center; */
+    margin: 0px;
+}
+
+.mas-datos p {
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .mapa {
-    display: grid;
+   
     margin: 10px;
-    padding: 10px;
-    /* align-content: center; */
+    
 }
 
-.principal div {
-    /*  border: 1px solid black; */
+.otra-información {
+    text-align: left;
 }
 
 .alerta {
@@ -61,24 +78,63 @@ Text Domain:  united-pets_child
     font-size: 0.7rem;
 }
 
-.info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.nombre-propietario {
+    
+    padding: 10px;
+    font-weight: bold;
 }
 
-.foto2 {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    z-index: 1;
-    right: 350px;
-    bottom: 150px;
+.apellidos-propietario {
+    
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.foto1 {
-    position: absolute;
-    height: 300px;
-    width: 300px;
-    z-index: -1;
+.rut-propietario {
+    
+    padding: 10px;
+    font-size: 1rem;
 }
 
+.telefono-propietario {
+    
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.email-propietario {
+    
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.foto-mascota{
+    width: 44.5vh;
+    height: 45vh;
+    background-size: cover;
+}
+.codigo{
+    width: 14vh;
+    height: 10vh;
+    display: flex;
+    float: right;
+    
+    margin: 10px;
+
+   
+}
+
+.sexo-mascota {
+    height: 50px;
+    width: 50px;
+    justify-self: right;
+}
+
+.tipo-mascota {
+    height: 50px;
+    width: 50px;
+}
