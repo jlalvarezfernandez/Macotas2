@@ -1,10 +1,12 @@
-    <?php
+<?php
+    get_header();
+    
     //definicion de variables
 
     // variables para mandar el correo de alerta si fuera necesario
 
     $dueno = get_field('nombre_dueno');
-    $alerta_formulario = 'si';
+    
     $subject = "mensaje de prueba";
     $headers = 'From: pagina mascotas <+cotas.@gmail.com>/r/n';
     $to = "joseluisalvarezfernandez@gmail.com/r/n";
@@ -32,38 +34,29 @@
 
     $direccion = "calle%20Jose%20altolaguirre%204";
 
-
-
     ?>
-    <?php
-    get_header();
-    ?>
-    <div class="alerta">
-        <p>Se ha enviado un email al propietario de la mascota</p>
-    </div>
 
-    <p>
-
-        <?php
-
-        if (get_field('alerta') == true) {
-        ?>
-    <div class="alerta">
-        <p>Se ha enviado un email al propietario de la mascota</p>
-    </div>
-    <?php
-            if (mail($to, $subject, $message, $headers) == true) {
-                echo "email enviado";
-            } else {
-                echo "El email no se ha podido mandar, consulte con su administrador";
+    
+    <?php if (get_field('alerta') == true): ?>
+        <?php   
+            //$mail = mail($to, $subject, $message, $headers);
+            $mail = false;
+            if ($mail){
+                $message = __("Email enviado al propietario de la mascota");
+                $class = 'success';
             }
-        }
-
-
-        /*  the_field('alerta'); */ ?>
-    </p>
+            else{
+                $message = __("El email no se ha podido mandar, consulte con su administrador");
+                $class = 'error';
+            } 
+        ?>
+            <div class="alerta <?= $class; ?>">
+                <?= $message ?>;
+            </div>
+    <?php endif; ?>       
+    
     <main class="principal">
-        <article class="datos-mascota">
+        <section class="datos-mascota">
 
             <div class="info">
                 <h1>
@@ -140,16 +133,16 @@
             </div>
 
 
-        </article>
-        <article class="img-mascota">
+        </section>
+        <section class="img-mascota">
             <div class="foto-mascota" style="background-image: url(<?php echo $foto1 ?>)">
                 <div class="codigo">
                     <img src="<?php echo $foto2 ?>" alt="">
                 </div>
 
             </div>
-        </article>
-        <article class="datos-dueño">
+        </section>
+        <section class="datos-dueño">
             <div class="nombre-propietario">
                 <h2>Datos Propietario
 
@@ -194,16 +187,14 @@
                     echo $email; ?>
                 </p>
             </div>
-        </article>
-        <article class="mapa">
+        </section>
+        <section class="mapa">
             <div class="localizacion-mapa" style="width: 100%">
             <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo $direccion ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
            
-        </article>
+        </section>
     </main>
 
-    <?php
-    get_footer();
-    ?>
+<?php get_footer(); ?>
