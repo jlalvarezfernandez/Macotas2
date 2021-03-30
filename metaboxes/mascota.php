@@ -203,9 +203,9 @@ if (function_exists('acf_add_local_field_group')) :
 				'maxlength' => '',
 			),
 			array(
-				'key' => 'apellidos_propietario',
+				'key' => 'apellidos_dueno',
 				'label' => 'Apellidos',
-				'name' => 'apellidos_propietario',
+				'name' => 'apellidos_dueno',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 1,
