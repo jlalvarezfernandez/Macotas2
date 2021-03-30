@@ -78,54 +78,38 @@ Text Domain:  united-pets_child
     font-size: 0.7rem;
 }
 
-.nombre-propietario {
-    
+.nombre-propietario {    
     padding: 10px;
-    font-weight: bold;
 }
 
-.apellidos-propietario {
-    
+.apellidos-propietario {    
     padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.2rem;    
 }
 
-.rut-propietario {
-    
-    padding: 10px;
-    font-size: 1rem;
-}
-
-.telefono-propietario {
-    
+.telefono-propietario {    
     padding: 10px;
     font-size: 1rem;
     font-weight: bold;
 }
 
-.email-propietario {
-    
+.email-propietario {    
     padding: 10px;
     font-size: 1rem;
-    font-weight: bold;
 }
-
 
 .foto-mascota{
     width: 44.5vh;
     height: 45vh;
     background-size: cover;
 }
+
 .codigo{
     width: 14vh;
     height: 10vh;
     display: flex;
-    float: right;
-    
+    float: right;    
     margin: 10px;
-
-   
 }
 
 .sexo-mascota {
