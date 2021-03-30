@@ -48,16 +48,8 @@ Text Domain:  united-pets_child
     margin: 0px;
 }
 
-.mas-datos p {
-    margin: 0px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.mapa {
-   
-    margin: 10px;
-    
+.mapa {   
+    margin: 10px;    
 }
 
 .otra-información {
@@ -90,7 +82,6 @@ Text Domain:  united-pets_child
 .telefono-propietario {    
     padding: 10px;
     font-size: 1rem;
-    font-weight: bold;
 }
 
 .email-propietario {    
