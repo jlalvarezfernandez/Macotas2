@@ -64,74 +64,37 @@
                     echo " - " ?>
 
                     <?php the_field('raza'); ?>
-                    <div class="chip-mascota">
-                        <p>CHIP:
-                            <?php
-                            $chip = "12345";
-                            the_field('chip');
-                            echo $chip ?>
-                        </p>
-                    </div>
+                    
                 </h1>
-
+                <div class="chip-mascota">
+                    <label>CHIP:</label>
+                    <span><?php the_field('chip'); ?> </span>                       
+                </div>
                 <div class="sexo-mascota">
-                    <p>
-                        <?php
-                        if ($sexo_mascota_formulario ==  'Macho') {
+                    <?php
+                        if ( strtolower($sexo_mascota_formulario) == 'macho' ) {
                             echo "<img src='$macho' alt='macho' title='macho'/>";
                         } else {
                             echo "<img src='$hembra' alt='hembra' title='hembra'/>";
                         }
-                        ?>
-                    </p>
+                    ?>
                 </div>
                 <div class="tipo-mascota">
-                    <p>
-                        <?php
+                    <?php
                         if ($tipo_animal_formulario == 'perro') {
-                            echo "<img src='$perro'/ alt='perro' title='perro'/>";
+                            echo "<img src='$perro' class='icon-tipo perro' alt='perro' title='perro'/>";
                         } else {
-                            echo "<img src='$gato' alt='gato' title='gato'/>";
+                            echo "<img src='$gato' class='icon-tipo gato' alt='gato' title='gato'/>";
                         }
-                        ?>
-                    </p>
+                    ?>                    
                 </div>
             </div>
             <div class="mas-datos">
                 <div class="otra-info">
-                    <p>OTRA INFORMACIÓN:
-                        <?php the_field('otra_informacion'); ?>
-                    </p>
-                    <p>Enfermedades en los ojos, diaspiasia de cadera. Vacunado contra la rabia</p>
+                    <h3>Información complementaria: </h3>
+                    <p><?php the_field('otra_informacion'); ?></p>
                 </div>
-                <!--  <div class="id-mascota">
-                    <p>ID:
-                        <?php the_field('id'); ?>
-                    </p>
-                </div> -->
-                <!-- <div class="user-mascota">
-                    <p>USER:
-                        <?php $user = get_field('user'); ?>
-                        <?php if ($user) : ?>
-                            <a href="<?php echo get_author_posts_url($user['ID']); ?>">
-                                <?php echo esc_html($user['display_name']); ?>
-                            </a>
-                        <?php endif; ?>
-                    </p>
-
-                </div> -->
-                <!--  <div class="qr-mascota">
-                    <p>Qr:
-                        <?php $qr = get_field('qr'); ?>
-
-                        <?php if ($qr) : ?>
-                        <img src="<?php echo esc_url($qr['url']); ?>" alt="<?php echo esc_attr($qr['alt']); ?>" />
-                        <?php endif; ?>
-                        
-                    </p>
-                </div> -->
             </div>
-
 
         </section>
         <section class="img-mascota">
