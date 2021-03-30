@@ -26,9 +26,9 @@
 
     // variables para mostrar el código qr y la imagen que le acompaña
 
-    $foto = get_field('foto');
-    $foto1 =  get_stylesheet_directory_uri() . "/assets/img/mandarina.png";
-    $foto2 = "https://api.qrserver.com/v1/create-qr-code/?data=http://localhost/proyectoMascotas/mascota/fgfbgfd/&amp;size=100x100";
+    $foto1 = get_field('foto');    
+
+    $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() ."&amp;size=150x150";
 
     // variabe para mostrar el mapa
 
@@ -100,63 +100,34 @@
         <section class="img-mascota">
             <div class="foto-mascota" style="background-image: url(<?php echo $foto1 ?>)">
                 <div class="codigo">
-                    <img src="<?php echo $foto2 ?>" alt="">
+                    <img src="<?php echo $qr ?>" alt="">
                 </div>
 
             </div>
         </section>
         <section class="datos-dueño">
             <div class="nombre-propietario">
-                <h2>Datos Propietario
-
-
-                    <!--  <?php
-                            $dueño = "Antonio";
-                            $apellidos = "Quesada Cuadrado";
-                            the_field('nombre_dueno');
-                            echo $dueño . " " . $apellidos; ?> -->
-                </h2>
+                <h2>Datos Propietario</h2>
             </div>
             <div class="apellidos-propietario">
-                <p>
-                    <?php
-                    $dueño = "Antonio";
-                    $apellidos = "Quesada Cuadrado";
-                    the_field('nombre_dueno');
-                    echo $dueño . " " . $apellidos; ?>
-                </p>
-            </div>
-            <!--  <div class="rut-propietario">
-                <p>RUT:
-                    <?php
-                    $rut = "12345";
-                    the_field('rut');
-                    echo $rut;  ?>
-                </p>
-            </div> -->
+                <?php                    
+                    the_field('nombre_dueno');                     
+                ?>
+            </div>            
             <div class="telefono-propietario">
-                <p>TELÉFONO:
-                    <?php
-                    $tel = "1234567890";
-                    the_field('telefono');
-                    echo $tel; ?>
-                </p>
+                <label>Teléfono: </label>
+                <span><?php the_field('telefono'); ?></span>
             </div>
             <div class="email-propietario">
-                <p>EMAIL:
-                    <?php
-                    $email = "loquesea@gmail.com";
-                    the_field('email');
-                    echo $email; ?>
-                </p>
+                <label>EMAIL:</label>
+                <span><?php the_field('email'); ?></span>                
             </div>
         </section>
         <section class="mapa">
             <div class="localizacion-mapa" style="width: 100%">
             <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo $direccion ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-            </iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
-           
+            </iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>           
         </section>
     </main>
 
