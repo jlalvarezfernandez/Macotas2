@@ -12,13 +12,64 @@ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, access
 Text Domain:  united-pets_child
 */
 
-@media (max-width: 768px) {
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
+}
+
+
+.img-mascota {
+    display: flex;
+    justify-content: center;
+}
+
+.foto-mascota {
+    width: 600px;
+    height: 600px;
+    background-size: cover;
+}
+.codigo{
+    width: 200px;
+    height: 200px;
+
+}
+.datos-mascota{
+    padding: 5px;
+}
+
+.info{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+}
+.sexo-tipo-mascota{
+    justify-self: center;
+
+}
+.descripcion-mascota{
+    text-align: justify;
+    margin: 20px;
+}
+.mas-datos{
+    text-align: justify;
+    margin: 20px;
+}
+.datos-dueño{
+    margin: 20px;
+    padding: 5px;
+    text-align: justify;
+
+}
+.mapa{
+    margin: 20px;
+    padding: 5px;
+
+}
+
+@media (min-width: 768px) {
     .principal {
         display: grid;
         grid-template-columns: 62% 33%;
+        font-size: 1rem;
     }
     .info {
         justify-self: center;
