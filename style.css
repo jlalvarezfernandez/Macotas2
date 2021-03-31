@@ -12,3 +12,101 @@ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, access
 Text Domain:  united-pets_child
 */
 
+.hidden {
+    display: none;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 62% 33%;
+}
+
+.info {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 80% 10% 10%;
+    text-align: left;
+    *align-items: center;
+    padding: 0;
+}
+
+.info h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.raza-mascota {
+    font-size: 1.2rem;
+}
+
+.info p {
+    margin: 0;
+}
+
+.mas-datos {
+    display: grid;
+    margin: 0px;
+}
+
+.mapa {   
+    margin: 10px;    
+}
+
+.otra-información {
+    text-align: left;
+}
+
+.alerta {
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 4vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.chip-mascota {
+    font-size: 0.7rem;
+}
+
+.nombre-propietario {    
+    padding: 10px;
+}
+
+.apellidos-propietario {    
+    padding: 10px; 
+}
+
+.telefono-propietario {    
+    padding: 10px;
+}
+
+.email-propietario {    
+    padding: 10px;
+}
+
+.foto-mascota{
+    width: 44.5vh;
+    height: 45vh;
+    background-size: cover;
+}
+
+.codigo{
+    width: 14vh;
+    height: 10vh;
+    display: flex;
+    float: right;    
+    margin: 10px;
+}
+
+.sexo-mascota {
+    height: 50px;
+    width: 50px;
+    justify-self: right;
+}
+
+.tipo-mascota {
+    height: 50px;
+    width: 50px;
+}
