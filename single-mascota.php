@@ -52,6 +52,7 @@ $direccion = "calle%20Jose%20altolaguirre%204";
 <?php endif; ?>
 
 <main class="principal single-mascotas.php">
+
     <section class="img-mascota single-mascotas.php">
         <div class="foto-mascota single-mascotas.php" style="background-image: url('<?php echo get_field('foto_mascota')['url']; ?>')">
             <div class="codigo single-mascotas.php">
@@ -62,13 +63,14 @@ $direccion = "calle%20Jose%20altolaguirre%204";
     <section class="datos-mascota">
 
         <div class="info">
+            <div class="nombre-sexo">
             <div class="nombre-raza">
-                <h1>
+                <h2>
                     <?php the_field('nombre_mascota');
                     echo " - ";
                     the_field('raza');
                     ?>
-                </h1>
+                </h2>
             </div>
             <div class="sexo-tipo-mascota">
                 <?php
@@ -84,25 +86,30 @@ $direccion = "calle%20Jose%20altolaguirre%204";
                 }
                 ?>
             </div>
+
+            </div>
             
-        </div>
-        <div class="descripcion-mascota">
-            <p><?php the_content(); ?></p>
-        </div>
-        <hr>
-        <div class="mas-datos">
-            <div class="otra-info">
-                <h5>Información complementaria: </h5>
-                <div class="otra-informacion">
-                    <p><?php the_field('otra_informacion'); ?></p>
-                </div>
-                <div class="chip">
-                    <label>Chip: </label><span><?php the_field('chip'); ?></span>
+            <div class="descripcion-mascota">
+                <p><?php the_content(); ?></p>
+            </div>
+            <hr>
+            <div class="mas-datos">
+                <div class="otra-info">
+                    <h5>Información complementaria: </h5>
+                    <div class="otra-informacion">
+                        <p><?php the_field('otra_informacion'); ?></p>
+                    </div>
+                    <div class="chip">
+                        <label>Chip: </label><span><?php the_field('chip'); ?></span>
+                    </div>
                 </div>
             </div>
+
         </div>
 
+
     </section>
+
 
     <section class="datos-dueño">
         <div class="nombre-propietario">
