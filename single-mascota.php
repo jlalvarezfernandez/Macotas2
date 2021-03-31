@@ -60,11 +60,11 @@ $direccion = "calle%20Jose%20altolaguirre%204";
             </div>
         </div>
     </section>
-    <section class="datos-mascota">
+    <section class="datos-mascota single-mascotas.php">
 
-        <div class="info">
-            <div class="nombre-sexo">
-            <div class="nombre-raza">
+        <div class="info single-mascotas.php">
+            <div class="nombre-sexo single-mascotas.php">
+            <div class="nombre-raza single-mascotas.php">
                 <h2>
                     <?php the_field('nombre_mascota');
                     echo " - ";
@@ -72,7 +72,7 @@ $direccion = "calle%20Jose%20altolaguirre%204";
                     ?>
                 </h2>
             </div>
-            <div class="sexo-tipo-mascota">
+            <div class="sexo-tipo-mascota single-mascotas.php">
                 <?php
                 if (strtolower($sexo_mascota_formulario) == 'macho') {
                     echo "<img src='$macho' alt='macho' title='macho'/>";
@@ -89,14 +89,14 @@ $direccion = "calle%20Jose%20altolaguirre%204";
 
             </div>
             
-            <div class="descripcion-mascota">
+            <div class="descripcion-mascota single-mascotas.php">
                 <p><?php the_content(); ?></p>
             </div>
             <hr>
-            <div class="mas-datos">
-                <div class="otra-info">
+            <div class="mas-datos single-mascotas.php">
+                <div class="otra-info single-mascotas.php">
                     <h5>Información complementaria: </h5>
-                    <div class="otra-informacion">
+                    <div class="otra-informacion single-mascotas.php">
                         <p><?php the_field('otra_informacion'); ?></p>
                     </div>
                     <div class="chip">
@@ -111,25 +111,25 @@ $direccion = "calle%20Jose%20altolaguirre%204";
     </section>
 
 
-    <section class="datos-dueño">
-        <div class="nombre-propietario">
+    <section class="datos-dueño single-mascotas.php">
+        <div class="nombre-propietario single-mascotas.php">
             <h2>Datos Propietario</h2>
         </div>
-        <div class="apellidos-propietario">
+        <div class="apellidos-propietario single-mascotas.php">
             <label>Nombre y apellidos: </label><span><?php the_field('nombre_dueno');
                                                         echo ' ';
                                                         the_field('apellidos_dueno'); ?></span>
         </div>
-        <div class="telefono-propietario">
+        <div class="telefono-propietario single-mascotas.php">
             <label>Teléfono: </label>
             <span><?php the_field('telefono'); ?></span>
         </div>
-        <div class="email-propietario">
+        <div class="email-propietario single-mascotas.php">
             <label>EMAIL:</label>
             <span><?php the_field('email'); ?></span>
         </div>
     </section>
-    <section class="mapa">
+    <section class="mapa single-mascotas.php">
         <div class="localizacion-mapa" style="width: 100%">
             <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo $direccion ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe><a href="https://www.maps.ie/route-planner.htm"></a>
