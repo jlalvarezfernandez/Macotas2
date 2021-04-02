@@ -15,6 +15,10 @@ Text Domain:  united-pets_child
 .hidden {
     display: none;
 }
+.principal{
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
 
 .img-mascota {
     display: flex;
@@ -41,12 +45,10 @@ Text Domain:  united-pets_child
     display: grid;
     justify-content: center;
 }
-.nombre-sexo{
+
+.nombre-sexo {
     text-align: center;
-
-
 }
-
 
 .sexo-tipo-mascota {
     justify-self: center;
@@ -60,22 +62,18 @@ Text Domain:  united-pets_child
 
 .descripcion-mascota {
     text-align: justify;
-    
 }
 
 .mas-datos {
     text-align: justify;
-    
 }
 
 .datos-dueño {
-    
     padding: 5px;
     text-align: justify;
 }
 
 .mapa {
-    
     padding: 5px;
 }
 
@@ -83,24 +81,23 @@ Text Domain:  united-pets_child
     .principal {
         display: grid;
         grid-template-columns: 55% 45%;
+        
     }
-    .img-mascota{
+    .img-mascota {
         grid-column-start: 2;
         margin: 5px;
         margin-bottom: 15px;
     }
-    .datos-mascota{
+    .datos-mascota {
         grid-column-start: 1;
         grid-row-start: 1;
     }
-    .nombre-sexo{
+    .nombre-sexo {
         display: grid;
         grid-template-columns: 75% 25%;
         align-items: center;
-
-
     }
-    .nombre-raza h2{
+    .nombre-raza h2 {
         font-size: 2rem;
         text-align: left;
     }
@@ -109,14 +106,12 @@ Text Domain:  united-pets_child
         height: 500px;
         background-size: cover;
     }
-    .codigo img{
+    .codigo img {
         width: 100px;
         height: 100px;
-    }  
-    .info{
+    }
+    .info {
         margin-right: 50px;
-     
-
     }
     /* .mapa{
         margin: 5px;
@@ -126,7 +121,7 @@ Text Domain:  united-pets_child
         margin-right: 50px;
 
     } */
-   /*  .datos-foto {
+    /*  .datos-foto {
         display: flex;
         flex-direction: column-reverse;
     } */

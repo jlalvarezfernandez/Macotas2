@@ -27,9 +27,6 @@ $tipo_animal_formulario = get_field('tipo');
 
 $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "&amp;size=250x250";
 
-// variabe para mostrar el mapa
-
-$direccion = "calle%20Jose%20altolaguirre%204";
 
 ?>
 
@@ -64,31 +61,31 @@ $direccion = "calle%20Jose%20altolaguirre%204";
 
         <div class="info single-mascotas.php">
             <div class="nombre-sexo single-mascotas.php">
-            <div class="nombre-raza single-mascotas.php">
-                <h2>
-                    <?php the_field('nombre_mascota');
-                    echo " - ";
-                    the_field('raza');
+                <div class="nombre-raza single-mascotas.php">
+                    <h2>
+                        <?php the_field('nombre_mascota');
+                        echo " - ";
+                        the_field('raza');
+                        ?>
+                    </h2>
+                </div>
+                <div class="sexo-tipo-mascota single-mascotas.php">
+                    <?php
+                    if (strtolower($sexo_mascota_formulario) == 'macho') {
+                        echo "<img src='$macho' alt='macho' title='macho'/>";
+                    } else {
+                        echo "<img src='$hembra' alt='hembra' title='hembra'/>";
+                    }
+                    if ($tipo_animal_formulario == 'perro') {
+                        echo "<img src='$perro' class='icon-tipo perro' alt='perro' title='perro'/>";
+                    } else {
+                        echo "<img src='$gato' class='icon-tipo gato' alt='gato' title='gato'/>";
+                    }
                     ?>
-                </h2>
-            </div>
-            <div class="sexo-tipo-mascota single-mascotas.php">
-                <?php
-                if (strtolower($sexo_mascota_formulario) == 'macho') {
-                    echo "<img src='$macho' alt='macho' title='macho'/>";
-                } else {
-                    echo "<img src='$hembra' alt='hembra' title='hembra'/>";
-                }
-                if ($tipo_animal_formulario == 'perro') {
-                    echo "<img src='$perro' class='icon-tipo perro' alt='perro' title='perro'/>";
-                } else {
-                    echo "<img src='$gato' class='icon-tipo gato' alt='gato' title='gato'/>";
-                }
-                ?>
-            </div>
+                </div>
 
             </div>
-            
+
             <div class="descripcion-mascota single-mascotas.php">
                 <p><?php the_content(); ?></p>
             </div>
@@ -124,6 +121,10 @@ $direccion = "calle%20Jose%20altolaguirre%204";
             <label>Teléfono: </label>
             <span><?php the_field('telefono'); ?></span>
         </div>
+        <div>
+            <label>Dirección: </label>
+            <?php the_field('owner_address'); ?>
+        </div>
         <div class="email-propietario single-mascotas.php">
             <label>EMAIL:</label>
             <span><?php the_field('email'); ?></span>
@@ -131,7 +132,7 @@ $direccion = "calle%20Jose%20altolaguirre%204";
     </section>
     <section class="mapa single-mascotas.php">
         <div class="localizacion-mapa" style="width: 100%">
-            <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo $direccion ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo  the_field('owner_address'); ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe><a href="https://www.maps.ie/route-planner.htm"></a>
         </div>
     </section>
