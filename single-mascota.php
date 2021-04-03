@@ -38,7 +38,7 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
         
         $message = __("Email enviado al propietario de la mascota");
         ?>
-        <div class = "sucess mascotas.php"> <?php $class = 'success'; ?></div> 
+        <div class = "success mascotas.php"> <?php $class = 'success'; ?></div> 
         <?php
     } else {
         $message = __("El email no se ha podido mandar, consulte con su administrador");
