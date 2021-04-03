@@ -29,13 +29,13 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
 
 
 ?>
-
-
-<?php if (get_field('alerta_email') == true) : ?>
+    <div class="alerta <?= $class; ?>">
+    <?php if (get_field('alerta_email') == true) : ?>
     <?php
     //$mail = mail($to, $subject, $message, $headers);
     $mail = false;
     if ($mail) {
+        
         $message = __("Email enviado al propietario de la mascota");
         $class = 'success';
     } else {
@@ -43,7 +43,6 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
         $class = 'error';
     }
     ?>
-    <div class="alerta <?= $class; ?>">
         <?= $message; ?>
     </div>
 <?php endif; ?>

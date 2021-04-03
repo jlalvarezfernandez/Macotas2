@@ -15,7 +15,9 @@ Text Domain:  united-pets_child
 .hidden {
     display: none;
 }
-.principal{
+
+
+.principal {
     margin-bottom: 50px;
     padding-bottom: 50px;
 }
@@ -81,7 +83,6 @@ Text Domain:  united-pets_child
     .principal {
         display: grid;
         grid-template-columns: 55% 45%;
-        
     }
     .img-mascota {
         grid-column-start: 2;
