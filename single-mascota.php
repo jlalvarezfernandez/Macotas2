@@ -10,7 +10,7 @@ $dueno = get_field('nombre_dueno');
 
 $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
 $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
-$to = the_field('email');
+$to = get_field('email');
 $message = 'Este es un email de alerta, su mascota podría haber sido encontrada. /r/n';
 
 // variables para mostrar el sexo de la mascota
@@ -31,8 +31,8 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
 ?>
 <?php if (get_field('alerta_email') == true) : ?>
     <?php
-    //$mail = mail($to, $subject, $message, $headers);
-    $mail = false;
+    $mail = mail($to, $subject, $message, $headers);
+
     if ($mail) {
         $message = __("Email enviado al propietario de la mascota");
         $class = 'success';
@@ -40,12 +40,14 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
         $message = __("El email no se ha podido mandar, consulte con su administrador");
         $class = 'error';
     }
+
     ?>
+    <div class="alerta <?= $class;  ?>">
+        
+        <?= $message; ?>
+    </div>
 
 <?php endif; ?>
-<div class="alerta <?= $class; ?>">
-    <?= $message; ?>
-</div>
 
 <main class="principal">
 
