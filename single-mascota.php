@@ -37,10 +37,16 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
     if ($mail) {
         
         $message = __("Email enviado al propietario de la mascota");
-        $class = 'success';
+        ?>
+        <div class = "sucess mascotas.php"> <?php $class = 'success'; ?></div> 
+        <?php
     } else {
         $message = __("El email no se ha podido mandar, consulte con su administrador");
-        $class = 'error';
+        ?>
+        <div class = "error mascotas.php"> <?php $class = 'error'; ?></div>
+        <?php
+        
+        
     }
     ?>
         <?= $message; ?>

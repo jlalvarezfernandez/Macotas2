@@ -15,7 +15,12 @@ Text Domain:  united-pets_child
 .hidden {
     display: none;
 }
-
+.success{
+    background-color: green;
+}
+.erro{
+    background-color: red;
+}
 
 .principal {
     margin-bottom: 50px;
