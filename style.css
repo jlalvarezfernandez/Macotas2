@@ -15,6 +15,11 @@ Text Domain:  united-pets_child
 .hidden {
     display: none;
 }
+.single-mascota .alerta{
+    background-color: red;
+
+} 
+
 .single-mascota .success{
     background-color: green;
 }
@@ -48,10 +53,10 @@ Text Domain:  united-pets_child
     padding: 5px;
 }
 
-.single-mascota .info {
-    display: grid;
+/* .single-mascota .info {
+    *display: grid;
     justify-content: center;
-}
+} */
 
 .single-mascota .nombre-sexo {
     text-align: center;

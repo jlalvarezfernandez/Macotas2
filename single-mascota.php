@@ -29,29 +29,23 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
 
 
 ?>
-    <div class="alerta <?= $class; ?>">
-    <?php if (get_field('alerta_email') == true) : ?>
+<?php if (get_field('alerta_email') == true) : ?>
     <?php
     //$mail = mail($to, $subject, $message, $headers);
     $mail = false;
     if ($mail) {
-        
         $message = __("Email enviado al propietario de la mascota");
-        ?>
-        <div class = "success"> <?php $class = 'success' . $message; ?></div> 
-        <?php
+        $class = 'success';
     } else {
         $message = __("El email no se ha podido mandar, consulte con su administrador");
-        ?>
-        <div class = "error"> <?php $class = 'error'. $message; ?></div>
-        <?php
-        
-        
+        $class = 'error';
     }
     ?>
-        <?= $message; ?>
-    </div>
+
 <?php endif; ?>
+<div class="alerta <?= $class; ?>">
+    <?= $message; ?>
+</div>
 
 <main class="principal">
 
