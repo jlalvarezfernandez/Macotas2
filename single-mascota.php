@@ -38,12 +38,12 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
         
         $message = __("Email enviado al propietario de la mascota");
         ?>
-        <div class = "success single-mascotas.php"> <?php $class = 'success' . $message; ?></div> 
+        <div class = "success"> <?php $class = 'success' . $message; ?></div> 
         <?php
     } else {
         $message = __("El email no se ha podido mandar, consulte con su administrador");
         ?>
-        <div class = "error single-mascotas.php"> <?php $class = 'error'. $message; ?></div>
+        <div class = "error"> <?php $class = 'error'. $message; ?></div>
         <?php
         
         
@@ -53,20 +53,20 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
     </div>
 <?php endif; ?>
 
-<main class="principal single-mascotas.php">
+<main class="principal">
 
-    <section class="img-mascota single-mascotas.php">
-        <div class="foto-mascota single-mascotas.php" style="background-image: url('<?php echo get_field('foto_mascota')['url']; ?>')">
-            <div class="codigo single-mascotas.php">
+    <section class="img-mascota">
+        <div class="foto-mascota" style="background-image: url('<?php echo get_field('foto_mascota')['url']; ?>')">
+            <div class="codigo">
                 <img src="<?php echo $qr ?>" alt="qr-code" title="qr-code">
             </div>
         </div>
     </section>
-    <section class="datos-mascota single-mascotas.php">
+    <section class="datos-mascota">
 
-        <div class="info single-mascotas.php">
-            <div class="nombre-sexo single-mascotas.php">
-                <div class="nombre-raza single-mascotas.php">
+        <div class="info">
+            <div class="nombre-sexo">
+                <div class="nombre-raza">
                     <h2>
                         <?php the_field('nombre_mascota');
                         echo " - ";
@@ -74,7 +74,7 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
                         ?>
                     </h2>
                 </div>
-                <div class="sexo-tipo-mascota single-mascotas.php">
+                <div class="sexo-tipo-mascota">
                     <?php
                     if (strtolower($sexo_mascota_formulario) == 'macho') {
                         echo "<img src='$macho' alt='macho' title='macho'/>";
@@ -91,14 +91,14 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
 
             </div>
 
-            <div class="descripcion-mascota single-mascotas.php">
+            <div class="descripcion-mascota">
                 <p><?php the_content(); ?></p>
             </div>
             <hr>
-            <div class="mas-datos single-mascotas.php">
-                <div class="otra-info single-mascotas.php">
+            <div class="mas-datos">
+                <div class="otra-info">
                     <h5>Información complementaria: </h5>
-                    <div class="otra-informacion single-mascotas.php">
+                    <div class="otra-informacion">
                         <p><?php the_field('otra_informacion'); ?></p>
                     </div>
                     <div class="chip">
@@ -113,16 +113,16 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
     </section>
 
 
-    <section class="datos-dueño single-mascotas.php">
-        <div class="nombre-propietario single-mascotas.php">
+    <section class="datos-dueño">
+        <div class="nombre-propietario">
             <h2>Datos Propietario</h2>
         </div>
-        <div class="apellidos-propietario single-mascotas.php">
+        <div class="apellidos-propietario">
             <label>Nombre y apellidos: </label><span><?php the_field('nombre_dueno');
                                                         echo ' ';
                                                         the_field('apellidos_dueno'); ?></span>
         </div>
-        <div class="telefono-propietario single-mascotas.php">
+        <div class="telefono-propietario">
             <label>Teléfono: </label>
             <span><?php the_field('telefono'); ?></span>
         </div>
@@ -130,12 +130,12 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
             <label>Dirección: </label>
             <?php the_field('owner_address'); ?>
         </div>
-        <div class="email-propietario single-mascotas.php">
+        <div class="email-propietario">
             <label>EMAIL:</label>
             <span><?php the_field('email'); ?></span>
         </div>
     </section>
-    <section class="mapa single-mascotas.php">
+    <section class="mapa">
         <div class="localizacion-mapa" style="width: 100%">
             <iframe width="100%" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=<?php echo  the_field('owner_address'); ?>&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
             </iframe><a href="https://www.maps.ie/route-planner.htm"></a>
