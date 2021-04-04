@@ -15,6 +15,25 @@ Text Domain:  united-pets_child
 .hidden {
     display: none;
 }
+.single-mascota .no-qr{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 30px;
+
+}
+.single-mascota .no-qr h1{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+
+}
+.single-mascota .no-qr img{
+    width: 200px;
+    align-self: center;
+
+}
 .single-mascota .error{
     background-color: red;
     color: white;

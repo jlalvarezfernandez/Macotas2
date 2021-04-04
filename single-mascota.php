@@ -48,8 +48,19 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
     </div>
 
 <?php endif; ?>
+<?php
 
-<main class="principal">
+if (get_field('nombre_mascota') == "") {
+    ?>
+    <main class="no-qr">
+        <h1>El código qr No esta registrado</h1>
+        <img src="<?php echo $qr ?>" alt="qr-code" title="qr-code">
+    </main>
+    <?php
+} else {
+    ?>
+   
+    <main class="principal">
 
     <section class="img-mascota">
         <div class="foto-mascota" style="background-image: url('<?php echo get_field('foto_mascota')['url']; ?>')">
@@ -138,5 +149,10 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
         </div>
     </section>
 </main>
+
+<?php
+}
+?>
+
 
 <?php get_footer(); ?>
