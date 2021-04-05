@@ -34,22 +34,27 @@ Text Domain:  united-pets_child
     align-self: center;
 
 }
-.single-mascota .error{
+.single-mascota .alerta.error{
     background-color: red;
     color: white;
     text-align: center;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
 
 } 
-.single-mascota .success{
+.single-mascota .alerta.success{
     background-color: green;
     color: white;
     text-align: center;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
 
 } 
+
 
 
 .single-mascota .principal {

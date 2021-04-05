@@ -11,7 +11,6 @@ $dueno = get_field('nombre_dueno');
 $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
 $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
 $to = get_field('email');
-$message = 'Este es un email de alerta, su mascota podría haber sido encontrada. /r/n';
 
 // variables para mostrar el sexo de la mascota
 
