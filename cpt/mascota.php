@@ -50,3 +50,56 @@ function mascota_cpt_create() {
     register_post_type( 'mascota', $args ); /* Registramos y a funcionar */
 }
 
+
+function up_generar_mascota(){
+    $id = wp_insert_post(array(
+      'post_title'=>'New Pet', 
+      'post_type'=>'mascota',
+    ));
+
+    $random_slug = generate_random_pet_slug($id);
+    $my_post = array(
+      'ID'           => $id,
+      'post_title'   =>  $random_slug,
+      'post_name'    =>  $random_slug,
+    );
+ 
+    // Update the post into the database
+    wp_update_post( $my_post );
+
+    update_post_meta( $id, 'id_slug_mascota', $random_slug);
+
+    $pet = array();
+
+    $pet['id'] = $id;
+    $pet['slug'] = $random_slug;
+
+    return $pet;
+}
+
+
+function generate_random_pet_slug($id){
+    if ($id == ''){
+        return false;
+    }    
+    return $id . '-' . createRandomPassword();
+}
+
+
+function createRandomPassword() { 
+
+    $chars = "abcdefghijkmnopqrstuvwxyz023456789"; 
+    srand((double)microtime()*1000000); 
+    $i = 0; 
+    $pass = '' ; 
+
+    while ($i <= 8) { 
+        $num = rand() % 33; 
+        $tmp = substr($chars, $num, 1); 
+        $pass = $pass . $tmp; 
+        $i++; 
+    } 
+
+    return $pass; 
+
+} 

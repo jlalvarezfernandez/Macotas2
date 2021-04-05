@@ -1,9 +1,8 @@
 <?php
 
 include("cpt/mascota.php");
-include("cpt/propietario.php");
 include("metaboxes/mascota.php");
-include("metaboxes/propietario.php");
+include("inc/functions/generator.php");
 
 
 function enqueue_styles_child_theme()
