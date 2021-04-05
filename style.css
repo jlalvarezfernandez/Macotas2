@@ -5,7 +5,7 @@ Description:  Child theme para modificaciones varias
 Author:       JoseLuis
 Author URI:   http://proyectoMascotas
 Template:     united-pets
-Version:      1.0.0
+Version:      1.0.3
 License:      GNU General Public License v2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
@@ -15,98 +15,140 @@ Text Domain:  united-pets_child
 .hidden {
     display: none;
 }
+.single-mascota .no-qr{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 30px;
 
-.principal {
-    display: grid;
-    grid-template-columns: 62% 33%;
 }
+.single-mascota .no-qr h1{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
 
-.info {
-    justify-self: center;
-    display: grid;
-    grid-template-columns: 80% 10% 10%;
-    text-align: left;
-    *align-items: center;
-    padding: 0;
 }
+.single-mascota .no-qr img{
+    width: 200px;
+    align-self: center;
 
-.info h1 {
-    font-size: 1.8rem;
-    margin: 0;
 }
-
-.raza-mascota {
-    font-size: 1.2rem;
-}
-
-.info p {
-    margin: 0;
-}
-
-.mas-datos {
-    display: grid;
-    margin: 0px;
-}
-
-.mapa {   
-    margin: 10px;    
-}
-
-.otra-información {
-    text-align: left;
-}
-
-.alerta {
+.single-mascota .alerta.error{
     background-color: red;
     color: white;
     text-align: center;
-    height: 4vh;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+
+} 
+.single-mascota .alerta.success{
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+
+} 
+
+
+
+.single-mascota .principal {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.single-mascota .img-mascota {
     display: flex;
-    align-content: center;
     justify-content: center;
+    padding: 0px;
 }
 
-.chip-mascota {
-    font-size: 0.7rem;
-}
-
-.nombre-propietario {    
-    padding: 10px;
-}
-
-.apellidos-propietario {    
-    padding: 10px; 
-}
-
-.telefono-propietario {    
-    padding: 10px;
-}
-
-.email-propietario {    
-    padding: 10px;
-}
-
-.foto-mascota{
-    width: 44.5vh;
-    height: 45vh;
+.single-mascota .foto-mascota {
+    width: 600px;
+    height: 600px;
     background-size: cover;
 }
 
-.codigo{
-    width: 14vh;
-    height: 10vh;
-    display: flex;
-    float: right;    
-    margin: 10px;
+.single-mascota .codigo {
+    width: 200px;
+    height: 200px;
 }
 
-.sexo-mascota {
-    height: 50px;
-    width: 50px;
-    justify-self: right;
+.single-mascota .datos-mascota {
+    padding: 5px;
 }
 
-.tipo-mascota {
-    height: 50px;
-    width: 50px;
+
+.single-mascota .nombre-sexo {
+    text-align: center;
+}
+
+.single-mascota .sexo-tipo-mascota {
+    justify-self: center;
+}
+
+.single-mascota .sexo-tipo-mascota img {
+    height: 64px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.single-mascota .descripcion-mascota {
+    text-align: justify;
+}
+
+.single-mascota .mas-datos {
+    text-align: justify;
+}
+
+.single-mascota .datos-dueño {
+    padding: 5px;
+    text-align: justify;
+}
+
+.single-mascota .mapa {
+    padding: 5px;
+}
+
+@media (min-width: 768px) {
+    .single-mascota .principal {
+        display: grid;
+        grid-template-columns: 55% 45%;
+    }
+    .single-mascota .img-mascota {
+        grid-column-start: 2;
+        margin: 5px;
+        margin-bottom: 15px;
+    }
+    .single-mascota .datos-mascota {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .single-mascota .nombre-sexo {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        align-items: center;
+    }
+    .single-mascota .nombre-raza h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
+    .single-mascota .foto-mascota {
+        width: 500px;
+        height: 500px;
+        background-size: cover;
+    }
+    .single-mascota .codigo img {
+        width: 100px;
+        height: 100px;
+    }
+    .single-mascota .info {
+        margin-right: 50px;
+    }
+   
 }
