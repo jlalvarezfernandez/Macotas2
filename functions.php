@@ -2,7 +2,6 @@
 
 include("cpt/mascota.php");
 include("metaboxes/mascota.php");
-include("metaboxes/propietario.php");
 
 
 function enqueue_styles_child_theme()
