@@ -2,6 +2,7 @@
 
 include("cpt/mascota.php");
 include("metaboxes/mascota.php");
+include("inc/functions/generator.php");
 
 
 function enqueue_styles_child_theme()

@@ -16,9 +16,9 @@ if (function_exists('acf_add_local_field_group')) :
 		'title' => 'Mascota',
 		'fields' => array(
 			array(
-				'key' => 'field_6050c8e599601',
+				'key' => 'id_slug_mascota',
 				'label' => 'id',
-				'name' => 'id',
+				'name' => 'id_slug_mascota',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 0,
@@ -33,6 +33,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'prepend' => '',
 				'append' => '',
 				'maxlength' => '',
+				'readonly' => 1
 			),
 			array(
 				'key' => 'nombre_mascota',
@@ -192,7 +193,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '40',
 					'class' => '',
 					'id' => '',
 				),
@@ -206,6 +207,25 @@ if (function_exists('acf_add_local_field_group')) :
 				'key' => 'apellidos_dueno',
 				'label' => 'Apellidos',
 				'name' => 'apellidos_dueno',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 1,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '60',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'owner_address',
+				'label' => __('Dirección', 'qrmascotas'),
+				'name' => 'owner_address',
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 1,
@@ -249,7 +269,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '33',
 					'class' => '',
 					'id' => '',
 				),
@@ -258,7 +278,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'prepend' => '',
 				'append' => '',
 				'maxlength' => '',
-			),
+			),		
 			array(
 				'key' => 'field_60464464bd641',
 				'label' => 'Telefono',
@@ -268,7 +288,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '33',
 					'class' => '',
 					'id' => '',
 				),
@@ -284,10 +304,10 @@ if (function_exists('acf_add_local_field_group')) :
 				'name' => 'email',
 				'type' => 'email',
 				'instructions' => '',
-				'required' => 0,
+				'required' => 1,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '33',
 					'class' => '',
 					'id' => '',
 				),
@@ -305,7 +325,7 @@ if (function_exists('acf_add_local_field_group')) :
 				'required' => 0,
 				'conditional_logic' => 0,
 				'wrapper' => array(
-					'width' => '',
+					'width' => '50',
 					'class' => '',
 					'id' => '',
 				),
@@ -316,7 +336,26 @@ if (function_exists('acf_add_local_field_group')) :
 				'maxlength' => '',
 				'ui' => 1,
 			),
-			
+			array(
+				'key' => 'qr_printed',
+				'label' => __('QR imprido?', 'qrmascotas'),
+				'name' => 'qr_printed',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '50',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+				'ui' => 1,
+			),			
 		),
 		'location' => array(
 			array(
