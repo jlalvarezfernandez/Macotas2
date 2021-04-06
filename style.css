@@ -11,6 +11,9 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  united-pets_child
 */
+footer{
+    margin-top:6rem;
+}
 
 .hidden {
     display: none;
@@ -169,6 +172,11 @@ Text Domain:  united-pets_child
 }
 .single-fundacion .text-center{
     padding: 30px;
+}
+
+.mascota-adoptada-tmp{
+    border-radius:10px;
+    border:1px solid #ccc;
 }
 
 @media (min-width: 768px) {

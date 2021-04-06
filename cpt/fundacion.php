@@ -15,8 +15,9 @@ add_action( 'init', 'fundacion_cpt_create' );
 
 function fundacion_cpt_create() {
 	$labels = array(
-		'name' => __( 'Fundacion'), 
-        'singular_name' => __( 'Fundacion' ),
+		'name' => __( 'Fundación'), 
+        'singular_name' => __( 'Fundación' ),
+        'plural_name' => __( 'Fundaciones' ),
         'add_new' => _x( 'Añadir nuevo', 'fundacion' ),
         'add_new_item' => __( 'Añadir nuevo fundacion'),
         'edit_item' => __( 'Editar fundacion' ),
@@ -44,9 +45,29 @@ function fundacion_cpt_create() {
         'taxonomies' => array( 'fundacion_category'),
         'menu_icon' => 'dashicons-admin-appearance',
         'map_meta_cap' => true,
+        'public' => true,
+        'has_archive' => true,
         'menu_icon'   => 'dashicons-admin-home',
-        );
+    );
  
     register_post_type( 'fundacion', $args ); /* Registramos y a funcionar */
 }
 
+/* Esta funcion obtiene las mascotas de cada fundación */
+function up_get_mascotas_fundacion($id){
+    if ($id == ''){
+        return array();
+    }
+    $adoptados = get_posts(
+        array(
+        'post_type' => 'adoptado',
+        'meta_query' => array(
+            array(
+                'key' => 'fundacion', // name of custom field
+                'value' => '"' . $id . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+                'compare' => 'LIKE'
+            )
+        )
+    ));
+    return $adoptados;
+}
