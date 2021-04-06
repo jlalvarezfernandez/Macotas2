@@ -2,6 +2,10 @@
 
 include("cpt/mascota.php");
 include("metaboxes/mascota.php");
+include("cpt/fundacion.php");
+include("metaboxes/fundacion.php");
+include("cpt/adoptado.php");
+include("metaboxes/adoptado.php");
 
 
 function enqueue_styles_child_theme()
