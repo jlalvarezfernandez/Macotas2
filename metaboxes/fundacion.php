@@ -8,7 +8,7 @@
  * Fundación: campos que va a tener cada fundación que creeemos  
  */
 
-/* if( function_exists('acf_add_local_field_group') ):
+ if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
         'key' => 'group_606bf5271143c',
@@ -91,4 +91,4 @@
         'description' => '',
     ));
     
-    endif; */
+    endif; 

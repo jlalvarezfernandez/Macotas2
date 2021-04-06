@@ -114,14 +114,7 @@ Text Domain:  united-pets_child
 }
 
 
-.single-fundacion .cabecera{
-   /*  display: grid;
-    grid-template-rows: 1fr 1fr; */
-   /*  display: flex;
-    flex-direction: column; */
-    
-    
-}
+
 .single-fundacion .logo{
     text-align: center;
    
@@ -165,6 +158,28 @@ Text Domain:  united-pets_child
     justify-content: center;
     padding: 5px;
     margin: 5px;
+
+}
+.single-fundacion .mascotas-adoptadas{
+    border: 1px solid black;
+    padding: 20px;
+    display: grid;
+    row-gap: 20px;
+
+}
+.single-fundacion .text-center{
+    padding: 30px;
+}
+
+@media (min-width: 768px) {
+    .single-fundacion .margin-adopt{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 20px;
+
+    }
 
 }
 
@@ -219,10 +234,23 @@ Text Domain:  united-pets_child
         grid-column-start: 1;
 
     }
-    .single-fundacion .general{
+ /*    .single-fundacion .general{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 10px;
+    } */
+
+    .single-fundacion .margin-adopt{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+
+    }
+
+    .single-fundacion .adopt-card .res-margin .row .bg-light .pattern2{
+        border: 1px solid black;
+
     }
 
    

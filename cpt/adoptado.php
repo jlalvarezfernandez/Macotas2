@@ -10,7 +10,7 @@
  * 
  */
 
-add_action( 'init', 'mascota_cpt_create' );
+add_action( 'init', 'adopcion_cpt_create' );
 
 
 function adopcion_cpt_create() {
