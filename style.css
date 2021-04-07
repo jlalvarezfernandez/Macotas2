@@ -174,16 +174,10 @@ footer{
     padding: 30px;
 }
 
-<<<<<<< HEAD
 .single-fundacion .info-adopt-center {
     position: absolute;
     top: 0px;
     left: 90px;
-=======
-.mascota-adoptada-tmp{
-    border-radius:10px;
-    border:1px solid #ccc;
->>>>>>> 4884698e96b4fc0babf26cc979828bd3fffb53b2
 }
 
 @media (min-width: 768px) {
