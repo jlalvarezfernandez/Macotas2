@@ -61,6 +61,7 @@ function up_get_mascotas_fundacion($id){
     $adoptados = get_posts(
         array(
         'post_type' => 'adoptado',
+        'posts_per_page' => -1,
         'meta_query' => array(
             array(
                 'key' => 'fundacion', // name of custom field
