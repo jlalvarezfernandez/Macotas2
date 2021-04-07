@@ -171,6 +171,12 @@ Text Domain:  united-pets_child
     padding: 30px;
 }
 
+.single-fundacion .info-adopt-center {
+    position: absolute;
+    top: 0px;
+    left: 90px;
+}
+
 @media (min-width: 768px) {
     .single-fundacion .margin-adopt{
         
