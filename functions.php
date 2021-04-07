@@ -2,10 +2,14 @@
 
 include("cpt/mascota.php");
 include("metaboxes/mascota.php");
+<<<<<<< HEAD
 include("cpt/fundacion.php");
 include("metaboxes/fundacion.php");
 include("cpt/adoptado.php");
 include("metaboxes/adoptado.php");
+=======
+include("inc/functions/generator.php");
+>>>>>>> e70597236864ad57164ba92a71d8158810983efb
 
 
 function enqueue_styles_child_theme()
