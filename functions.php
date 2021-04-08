@@ -7,6 +7,9 @@ include("metaboxes/fundacion.php");
 include("cpt/adoptado.php");
 include("metaboxes/adoptado.php");
 
+/* SHORTCODES */
+include("shortcodes/fundaciones.php");
+
 
 function enqueue_styles_child_theme()
 {
