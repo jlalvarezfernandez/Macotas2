@@ -67,28 +67,15 @@ function qr_generator_subpage()
 				}
 			</script>
 			<div id="printMe" style="display: flex; flex-wrap: wrap;">
-				<?php foreach ($pets as $petqr) : ?>
-					<div class="qr">
-						<table>
-							<tr>
-								<td>
-									<?php $url = 'https://api.qrserver.com/v1/create-qr-code/?data=' . home_url() . '/mascotas/' . $petqr['slug'] . '&amp;size=' . $_POST['size']; ?>
-									<img src="<?= $url; ?>">
-								</td>
-							</tr>
-							<tr>
-								<td><?php echo  $petqr['slug']; ?></td>
-							</tr>
-						</table>
-					</div>
-					<style>
-						.qr {
-							display: flex;
-							margin: 20px;
-							text-align: center;
-						}
-					</style>
-				<?php endforeach; ?>
+				<div class="qr" style="display:grid; grid-template-columns: 20% 20% 20% 20%; column-gap: 2em;">
+					<?php foreach ($pets as $petqr) : ?>
+						<div stlye="display:grid">
+							<?php $url = 'https://api.qrserver.com/v1/create-qr-code/?data=' . home_url() . '/mascotas/' . $petqr['slug'] . '&amp;size=' . $_POST['size']; ?>
+										<img src="<?= $url; ?>"><br>
+							<?php echo  '<span style="margin-bottom:2.5em; display:block">' .$petqr['slug'] . '</span>'; ?>
+						</div>										
+					<?php endforeach; ?>
+				</div>
 			</div>
 			<style>
 				@media print {
