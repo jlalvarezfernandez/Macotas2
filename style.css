@@ -12,29 +12,34 @@ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, access
 Text Domain:  united-pets_child
 */
 
+footer {
+    margin-top: 6rem;
+}
+
 .hidden {
     display: none;
 }
-.single-mascota .no-qr{
+
+.single-mascota .no-qr {
     height: 600px;
     display: flex;
     flex-direction: column;
     margin: 30px;
     padding: 30px;
-
 }
-.single-mascota .no-qr h1{
+
+.single-mascota .no-qr h1 {
     text-align: center;
     margin: 20px;
     padding: 20px;
-
 }
-.single-mascota .no-qr img{
+
+.single-mascota .no-qr img {
     width: 200px;
     align-self: center;
-
 }
-.single-mascota .alerta.error{
+
+.single-mascota .alerta.error {
     background-color: red;
     color: white;
     text-align: center;
@@ -42,9 +47,9 @@ Text Domain:  united-pets_child
     margin-bottom: 10px;
     padding-top: 10px;
     margin-top: 10px;
+}
 
-} 
-.single-mascota .alerta.success{
+.single-mascota .alerta.success {
     background-color: green;
     color: white;
     text-align: center;
@@ -52,10 +57,7 @@ Text Domain:  united-pets_child
     margin-bottom: 10px;
     padding-top: 10px;
     margin-top: 10px;
-
-} 
-
-
+}
 
 .single-mascota .principal {
     margin-bottom: 50px;
@@ -82,7 +84,6 @@ Text Domain:  united-pets_child
 .single-mascota .datos-mascota {
     padding: 5px;
 }
-
 
 .single-mascota .nombre-sexo {
     text-align: center;
@@ -114,6 +115,84 @@ Text Domain:  united-pets_child
 .single-mascota .mapa {
     padding: 5px;
 }
+
+.single-fundacion .logo {
+    text-align: center;
+}
+
+.single-fundacion .info div p {
+    text-align: justify;
+}
+
+.single-fundacion .info-mascotas {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.single-fundacion .general {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px;
+}
+
+.single-fundacion .datos-generales {
+    border: 1px solid black;
+    padding: 0px;
+}
+
+.single-fundacion .img-mascota {
+    margin: 10px;
+}
+
+.single-fundacion .datos-mascota {
+    padding-top: 30px;
+}
+
+.single-fundacion .enlace {
+    text-align: center;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.single-fundacion .enlace-externo {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.single-fundacion .mascotas-adoptadas {
+    border: 1px solid black;
+    padding: 20px;
+    display: grid;
+    row-gap: 20px;
+}
+
+.single-fundacion .text-center {
+    padding: 30px;
+}
+
+.single-fundacion .info-adopt-center {
+    position: absolute;
+    top: 0px;
+    left: 90px;
+}
+
+
+ .row-adopciones {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 20px;
+    
+    
+} 
+
+
 
 @media (min-width: 768px) {
     .single-mascota .principal {
@@ -150,5 +229,37 @@ Text Domain:  united-pets_child
     .single-mascota .info {
         margin-right: 50px;
     }
-   
+    .single-fundacion .cabecera {
+        display: grid;
+        grid-template-columns: 60% 40%;
+    }
+    .single-fundacion .logo {
+        grid-column-start: 2;
+    }
+    .single-fundacion .info {
+        grid-column-start: 1;
+    }
+    /*    .single-fundacion .general{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+    } */
+    .single-fundacion .margin-adopt {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }
+    .single-fundacion .adopt-card .res-margin .row .bg-light .pattern2 {
+        border: 1px solid black;
+    }
+
+    
+    .row-adopciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        column-gap: 20px;
+        
+    }
 }
