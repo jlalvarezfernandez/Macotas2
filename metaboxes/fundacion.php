@@ -15,25 +15,6 @@
         'title' => 'Fundacion',
         'fields' => array(
             array(
-                'key' => 'field_606bf542bb5ad',
-                'label' => 'Fundación',
-                'name' => 'fundacion',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '',
-                'prepend' => '',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
                 'key' => 'field_606bf55bbb5ae',
                 'label' => 'Dirección',
                 'name' => 'direccion',
