@@ -72,3 +72,12 @@ function up_get_mascotas_fundacion($id){
     ));
     return $adoptados;
 }
+
+function numero_fundaciones( $query ){
+    if( ! is_admin()
+        && $query->is_post_type_archive( 'fundacion' )
+        && $query->is_main_query() ){
+            $query->set( 'posts_per_page', -1 );
+    }
+}
+add_action( 'pre_get_posts', 'numero_fundaciones' );

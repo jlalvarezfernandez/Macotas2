@@ -182,53 +182,17 @@ footer {
 }
 
 
-
- .archive-fundacion .alignleft {
-    max-height: 300px;
-    display: inline;
-    margin-right: 1.5em;
-    width: auto;
-    text-align: center;
-}
-
-.archive-fundacion .logo{
-    max-height: 300px;
-    width: auto;
-}
-
-.archive-fundacion .title h3 {
-    text-align: center;
-    padding-top: 25px;
-}
-
-.archive-fundacion .excert {
-    text-align: justify;
-    padding: 10px;
-}
-
-.archive-fundacion .mas-info {
-    text-align: center;
-    padding-bottom: 30px;
-
-}
+ .row-adopciones {
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 20px;
+    
+    
+} 
 
 
-
-
-
-
-
-
-
-
-@media (min-width: 768px) {
-    .single-fundacion .margin-adopt {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 20px;
-    }
-}
 
 @media (min-width: 768px) {
     .single-mascota .principal {
@@ -287,5 +251,15 @@ footer {
     }
     .single-fundacion .adopt-card .res-margin .row .bg-light .pattern2 {
         border: 1px solid black;
+    }
+
+    
+    .row-adopciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        column-gap: 20px;
+        
     }
 }
