@@ -8,11 +8,12 @@ function ups_logos_fundaciones( $atts = array() ) {
 	    ), $atts));
 
     $args = array(
-    	'post-type' => 'fundacion',
+    	'post_type' => 'fundacion',
+        'posts_per_page' => -1,
     );
 
     $fundaciones = get_posts($args);
-    
+
 	ob_start();
 		include locate_template('shortcodes/tmp/fundaciones.php');
     return ob_get_clean();

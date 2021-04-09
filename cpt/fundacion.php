@@ -48,6 +48,7 @@ function fundacion_cpt_create() {
         'public' => true,
         'has_archive' => true,
         'menu_icon'   => 'dashicons-admin-home',
+        'rewrite' => ['slug' => 'fundaciones'],
     );
  
     register_post_type( 'fundacion', $args ); /* Registramos y a funcionar */
