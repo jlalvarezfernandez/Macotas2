@@ -264,6 +264,10 @@ footer {
     }
 }
 
+footer{
+    margin-top:3rem;
+}
+
 
 .container-fundaciones-shortcode .image{
     text-align: center;
