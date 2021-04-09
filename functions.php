@@ -17,7 +17,7 @@ include("shortcodes/fundaciones.php");
  * Unitedpets elementor
  */
 function unitedpets_elementor_custom() {	
-	require_once get_stylesheet_directory() . "./widgets/adopcion.php";	
+	include("widgets/adopcion.php");
 } 
 add_action( 'elementor/init', 'unitedpets_elementor_custom' );
 
