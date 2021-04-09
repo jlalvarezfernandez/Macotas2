@@ -21,13 +21,14 @@
                 <p><?php the_content(); ?></p>
         </div>
     </div>
+    <?php $adoptados = (up_get_mascotas_fundacion(get_the_id())); ?>
+    <?php if ( (is_array($adoptados)) && (count($adoptados)) > 0 ):?>
     <div class="row">
         <div class="col-md-12">
             <h2 class="mb-4"><?= __('Algunas de las mascotas que tienen en adopción:'); ?></h2>        
         </div>
     </div>
     <div class="row">
-        <?php $adoptados = (up_get_mascotas_fundacion(get_the_id())); ?>        
         <?php foreach ($adoptados as $key => $post):            
             setup_postdata( $post );
                 get_template_part('./templates/parts/single', 'adoptado'); 
@@ -38,6 +39,7 @@
     <div class="text-center">
         <a href="<?php the_field('web'); ?>" target="_blank" class="btn btn-primary">VER TODAS</a>
     </div>
+    <?php endif; ?>
 </main>
 
 <?php get_footer();

@@ -1,11 +1,25 @@
 <?php
 
+
 include("cpt/mascota.php");
 include("metaboxes/mascota.php");
 include("cpt/fundacion.php");
 include("metaboxes/fundacion.php");
 include("cpt/adoptado.php");
 include("metaboxes/adoptado.php");
+
+/* SHORTCODES */
+include("shortcodes/fundaciones.php");
+
+/* CUSTOM WIDGETS */
+
+/**
+ * Unitedpets elementor
+ */
+function unitedpets_elementor_custom() {	
+	require_once get_stylesheet_directory() . "./widgets/adopcion.php";	
+} 
+add_action( 'elementor/init', 'unitedpets_elementor_custom' );
 
 
 function enqueue_styles_child_theme()

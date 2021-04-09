@@ -61,7 +61,7 @@ if( function_exists('acf_add_local_field_group') ):
                 'placeholder' => '',
             ),
             array(
-                'key' => 'field_606bf312312156d94e',
+                'key' => 'field_606bf312312156d9ef',
                 'label' => 'Sexo',
                 'name' => 'sexo',
                 'type' => 'select',
@@ -74,8 +74,8 @@ if( function_exists('acf_add_local_field_group') ):
                     'id' => '',
                 ),
                 'choices' => array(
-                    'Gato' => 'Macho',
-                    'Perro' => 'Hembra',
+                    'Macho' => 'Macho',
+                    'Hembra' => 'Hembra',
                 ),
                 'default_value' => false,
                 'allow_null' => 0,

@@ -263,3 +263,27 @@ footer {
         
     }
 }
+
+
+.container-fundaciones-shortcode .image{
+    text-align: center;
+    margin:0 auto;
+}
+.container-fundaciones-shortcode img{
+    max-height:100px;
+    width:auto;
+}
+
+.owl-carousel .owl-item .adopt-card-info img.icon{
+    max-height:64px;
+    width: auto;
+    margin:0 auto;
+}
+.owl-carousel .owl-item .adopt-card-info{
+   text-align:center;
+   margin:0 auto;
+}
+
+.breadcrumb{
+    display:none;
+}
