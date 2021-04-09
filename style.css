@@ -280,6 +280,7 @@ footer{
 .container-fundaciones-shortcode img{
     max-height:100px;
     width:auto;
+    margin-bottom:4rem;
 }
 
 .owl-carousel .owl-item .adopt-card-info img.icon{
