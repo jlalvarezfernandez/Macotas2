@@ -268,8 +268,9 @@ footer{
 }
 
 
-.post-type-archive .logo {
-   
+.post-type-archive .logo img {
+   width: auto;
+   max-height:100px;
 }
 
 .container-fundaciones-shortcode .image{
