@@ -256,11 +256,10 @@ footer {
     
     .row-adopciones {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
         justify-items: center;
-        column-gap: 20px;
-        
+        column-gap: 20px;        
     }
 }
 
@@ -268,6 +267,10 @@ footer{
     margin-top:4rem;
 }
 
+
+.post-type-archive .logo {
+   
+}
 
 .container-fundaciones-shortcode .image{
     text-align: center;
