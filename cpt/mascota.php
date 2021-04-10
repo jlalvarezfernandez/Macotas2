@@ -32,10 +32,7 @@ function mascota_cpt_create() {
     $args = array(
         'label' => __('mascota'),
         'labels' => $labels,
-        'public' => false,
-        'has_archive' => false, 
-        'publicly_queryable' => false, 
-        'query_var' => false,
+        'public' => true,
         'can_export' => true,
         'show_ui' => true,
         '_builtin' => false,
@@ -49,7 +46,7 @@ function mascota_cpt_create() {
         'map_meta_cap' => true,
         'menu_icon'   => 'dashicons-pets',
         'exclude_from_search' => true,
-        );
+    );
  
     register_post_type( 'mascota', $args ); /* Registramos y a funcionar */
 }
