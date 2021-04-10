@@ -32,7 +32,10 @@ function mascota_cpt_create() {
     $args = array(
         'label' => __('mascota'),
         'labels' => $labels,
-        'public' => true,
+        'public' => false,
+        'has_archive' => false, 
+        'publicly_queryable' => false, 
+        'query_var' => false,
         'can_export' => true,
         'show_ui' => true,
         '_builtin' => false,
