@@ -11,6 +11,9 @@ include("metaboxes/adoptado.php");
 /* SHORTCODES */
 include("shortcodes/fundaciones.php");
 
+/* FUNCIONES */
+include("inc/functions/generator.php");
+
 /* CUSTOM WIDGETS */
 
 /**
