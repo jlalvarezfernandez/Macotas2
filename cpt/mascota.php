@@ -45,6 +45,7 @@ function mascota_cpt_create() {
         'menu_icon' => 'dashicons-admin-appearance',
         'map_meta_cap' => true,
         'menu_icon'   => 'dashicons-pets',
+        'exclude_from_search' => true,
         );
  
     register_post_type( 'mascota', $args ); /* Registramos y a funcionar */
