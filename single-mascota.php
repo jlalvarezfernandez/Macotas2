@@ -11,10 +11,9 @@ $dueno = get_field('nombre_dueno');
 $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
 $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
 $to = get_field('email');
-echo "antes";
+
 $message = file_get_contents('wp-content\themes\united-pets_child\email\envio-email.html');
 
-echo "HOLA RODRIGO";
 // variables para mostrar el sexo de la mascota
 
 $macho =  get_stylesheet_directory_uri() . "/assets/img/masculino.png";
