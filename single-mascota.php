@@ -11,6 +11,8 @@ $dueno = get_field('nombre_dueno');
 $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
 $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
 $to = get_field('email');
+error_reporting(-1);
+ini_set('display_errors', 'On');
 $message = file_get_contents('wp-content\themes\united-pets_child\email\envio-email.html');
 
 echo "HOLA RODRIGO";
