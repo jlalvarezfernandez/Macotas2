@@ -13,7 +13,6 @@ $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
 $to = get_field('email');
 
 $message = file_get_contents(get_stylesheet_directory() .'/email/envio-email.html');
-$message2 = "hola";
 // variables para mostrar el sexo de la mascota
 
 $macho =  get_stylesheet_directory_uri() . "/assets/img/masculino.png";
@@ -33,7 +32,6 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
 <?php if (get_field('alerta_email') == true) : ?>
     <?php
     $mail = mail($to, $subject, $message, $headers);
-    $mail = mail($to, $subject, $message2, $headers);
 
     if ($mail) {
         $message = __("Email enviado al propietario de la mascota");
@@ -47,7 +45,6 @@ $qr = "https://api.qrserver.com/v1/create-qr-code/?data=" . up_current_url() . "
     <div class="alerta <?= $class;  ?>">
         
         <?= $message; ?>
-        <?= $message2; ?>
     </div>
 
 <?php endif; ?>
