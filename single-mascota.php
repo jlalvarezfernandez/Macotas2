@@ -10,6 +10,8 @@ $dueno = get_field('nombre_dueno');
 
 $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
 $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
+$headers .= "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $to = get_field('email');
 
 $message = file_get_contents(get_stylesheet_directory() .'/email/envio-email.html');
