@@ -12,7 +12,7 @@ $subject = "POSIBLE ALERTA DE MASCOTA ENCONTRADA";
 $headers = 'From: QR MASCOTAS <contacto@qrmascotas.cl>/r/n';
 $to = get_field('email');
 
-$message = file_get_contents(get_stylesheet_directory() .'\email\envio-email.html');
+$message = file_get_contents(get_stylesheet_directory() .'/email/envio-email.html');
 
 // variables para mostrar el sexo de la mascota
 
